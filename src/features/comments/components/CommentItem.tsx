@@ -21,11 +21,11 @@ function CommentItem({comment, onCommentChange}: CommentItemProps) {
             {error && <ErrorMessage message={error} />}
             <div className="flex flex-col w-full rounded-lg my-3">
                 <div
-                    className={`flex gap-3 ${
+                    className={`flex flex-col sm:flex-row gap-3 ${
                         comment.parentId ? 'bg-neutral-200' : 'bg-neutral-100'
                     } rounded-lg p-2`}
                 >
-                    <div className="ml-1 pr-2 border-r border-neutral-400">
+                    <div className="flex-shrink-0 sm:pr-2 sm:border-r sm:border-neutral-400">
                         <UserAvatar
                             avatar={comment.avatar}
                             username={comment.username}
@@ -33,7 +33,7 @@ function CommentItem({comment, onCommentChange}: CommentItemProps) {
                         />
                     </div>
 
-                    <div className="flex justify-between items-start gap-4 flex-1">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 flex-1">
                         <p className="text-sm lg:text-base text-neutral-700 break-words leading-relaxed flex-1">
                             {comment.text}
                         </p>
