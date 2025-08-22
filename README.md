@@ -43,18 +43,22 @@ The system automatically synchronizes comments across multiple browser tabs in r
     npm run dev
     ```
 
-3. Open multiple browser tabs to test real-time functionality
+3. Open your browser at: http://localhost:5173, and open multiple browser tabs to test real-time functionality
 
 ## Browser Support
 
 -   **Real-time Updates**: Chrome 54+, Firefox 38+, Safari 15.4+
 -   **Database**: All modern browsers with IndexedDB support
 
-## Project Structure
+## Tests
+
+-   **CommentForm** test verifies that the component correctly renders the logged-in user’s info, displays the default comment input, and switches to a reply placeholder when a parentId is provided.
+
+-   **commentsService** test verifies that addComment correctly creates a new comment with session user data, saves it to the database, broadcasts the update, and returns the expected comment object.
 
 ## Development
 
+-   **Tesing**: `npm test`
 -   **Build**: `npm run build`
 -   **Lint**: `npm run lint`
 -   **Preview**: `npm run preview`
-# nwtzbqws
